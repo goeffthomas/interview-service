@@ -1,7 +1,7 @@
 {
-  "name": "@currency/rates",
+  "name": "interview-service",
   "version": "0.1.0",
-  "description": "rates Currency Rates",
+  "description": "Small service for interviewing candidates, provides a workspace with prompts to work through together",
   "main": "dist/index.js",
   "scripts": {
     "dev": "nodemon",
@@ -9,7 +9,7 @@
     "build": "tsc",
     "test": "jest"
   },
-  "author": "Currency Engineers <tech@gocurrency.com>",
+  "author": "Goeff Thomas <goeffthomas@gmail.com>",
   "dependencies": {
     "@types/cors": "^2.8.4",
     "@types/express": "^4.17.8",
