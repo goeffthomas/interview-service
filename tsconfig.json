@@ -6,7 +6,6 @@
 		"declaration": true,
 		"esModuleInterop": true,
 		"importHelpers": true,
-		"jsx": "react",
 		"lib": ["esnext", "dom"],
 		"module": "commonjs",
 		"moduleResolution": "node",
@@ -28,10 +27,6 @@
 	"exclude": [
 		"node_modules",
 		"dist",
-		"*.js",
-		"**/*.test.ts",
-		"**/__tests__",
-		"**/__fixtures__",
-		"**/__mocks__"
+		"*.js"
 	]
 }
