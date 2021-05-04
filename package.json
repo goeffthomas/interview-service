@@ -1,0 +1,30 @@
+{
+  "name": "@currency/rates",
+  "version": "0.1.0",
+  "description": "rates Currency Rates",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "nodemon",
+    "start": "node dist/index.js",
+    "build": "tsc",
+    "test": "jest"
+  },
+  "author": "Currency Engineers <tech@gocurrency.com>",
+  "dependencies": {
+    "@types/cors": "^2.8.4",
+    "@types/express": "^4.17.8",
+    "@types/helmet": "0.0.33",
+    "@types/morgan": "^1.7.32",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "helmet": "^3.23.3",
+    "morgan": "^1.10.0",
+    "nocache": "^2.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^14.0.1",
+    "nodemon": "^2.0.2",
+    "tslib": "^2.0.0",
+    "typescript": "^4.2.4"
+  }
+}
