@@ -11,9 +11,9 @@
 
 Setup:
 - Pull repo
-- Install dependencies
-- Start service
-- Ping to ensure that it's up
+- Install dependencies with `npm i`
+- Build and start the service with `npm run build` and `npm run start`
+- Ping to ensure that it's up by hitting `localhost:3004/`
 
 Bug hunting (investigate and fix):
 - Users are reporting inaccurate search results

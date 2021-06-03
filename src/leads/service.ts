@@ -49,7 +49,7 @@ export const insert = (newLeads: ILeadSubmission[]) => {
         if (!preexisting) {
             mergedLeads.push(newLead);
         } else {
-            // Duplicate detected in submission data Use latest submission data
+            // Duplicate detected in submission data--Use latest submission data
             if (new Date(preexisting.submittedOn).getTime() < new Date(newLead.submittedOn).getTime()) {
                 preexisting.firstName = newLead.firstName;
                 preexisting.lastName = newLead.lastName;
