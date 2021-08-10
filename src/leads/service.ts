@@ -3,6 +3,12 @@ import { ILeadSubmission } from './interfaces';
 
 export const dump = () => LEADS;
 
+/**
+ * Sample submissions:
+ *  - GET localhost:3004/leads/search?firstName=Walter
+ *  - GET localhost:3004/leads/search?industry=Engineering
+ *  - GET localhost:3004/leads/search?debt=0
+ */
 export const query = (query: any) => {
     const {
         createdOn,
@@ -13,10 +19,12 @@ export const query = (query: any) => {
         companyName,
         industry,
     } = query;
+
     // Convert string query params to numbers
-    const debt = Number(query.debt); 
+    const debt = Number(query.debt);
     const annualIncome = Number(query.annualIncome);
 
+    // Filtering here is expected to operate in an OR capacity, so if anyone search term matches, the record should be returned
     return LEADS.filter(l =>
         (createdOn && new Date(createdOn).getTime() === new Date(l.createdOn).getTime())
         || (modifiedOn && new Date(modifiedOn).getTime() === new Date(l.modifiedOn).getTime())
@@ -34,6 +42,9 @@ export const query = (query: any) => {
  * The method handles deduplication of submissions based on the email of the Lead(s)
  * @param newLeads Array of Lead submissions
  * @returns Array of merged Leads that were inserted into the DB
+ * 
+ * POST localhost:3004/leads
+ * Sample payloads in ./mock-db.ts
  */
 export const insert = (newLeads: ILeadSubmission[]) => {
     // Deny entire transaction if any Leads are already in DB by email

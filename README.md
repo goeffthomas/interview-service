@@ -12,15 +12,5 @@
 Setup:
 - Pull repo
 - Install dependencies with `npm i`
-- Build and start the service with `npm run build` and `npm run start`
+- Build and start the service with `npm run build` and `npm run dev`
 - Ping to ensure that it's up by hitting `localhost:3004/`
-
-Bug hunting (investigate and fix):
-- Users are reporting inaccurate search results
-- Users are reporting duplicate Leads showing up in the DB
-
-Optimization:
-- Profiling indicates performance issues with the Lead submission endpoint
-
-Feature implementation:
-- Product has requested a new feature to allow for updating existing Leads (should accept an array of Leads)
